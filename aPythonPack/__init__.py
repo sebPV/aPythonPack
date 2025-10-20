@@ -17,7 +17,7 @@ def sympArr(arr):
     return res
 
 
-def arrOp(func, values, args=[]):
+def arrOp(func, values, *args):
     argNames = func.__code__.co_varnames
     res = []
     for n in values:
@@ -25,19 +25,32 @@ def arrOp(func, values, args=[]):
         if not isinstance(values[0], Iterable):
             parsel[argNames[0]]=n
             for m in range(len(args)):
-                parsel[argNames[m+1]] = args[m]
+                if isinstance(args[m], dict):
+                    parsel.update(args[m])
+                else:
+                    parsel[argNames[m+1]] = args[m]
         else:
             for m in range(len(values)):
                 parsel[argNames[m]] = n[m]
             for m in range(len(args)):
-                parsel[argNames[m+len(n)]]=args[m]
-        print(parsel)
+                if isinstance(args[m],dict):
+                    parsel.update(args[m])
+                else:
+                    parsel[argNames[m+len(n)]]=args[m]
+        print('parsel=' + str(parsel))
         
         res.append(func(**parsel))
     return res
 
+from sympy.abc import x
+print(arrOp(sp.solveset,[(x-1)*(x-2)*(x-3)**5],{'symbol': x}))
+# def test(a,b,*arg):
+#     return a,b,*arg
+# print(test(1,2))
+# print(test(1,3))
+# print(test(1,3,5,5,{'3':9},7))
 
-
+print(type({'1':2}))
 
 def forceRekt(arr):
     if isinstance(arr, Iterable):
