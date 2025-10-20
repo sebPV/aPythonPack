@@ -1,6 +1,3 @@
-
-
-
 import matplotlib.pyplot as plt  # importerer matplotlib
 import sympy as sp# importerer sympy
 from sympy import exp, I , pi, sqrt

@@ -1,12 +1,12 @@
 from setuptools import setup
 
-setup(name='ThePack',
+setup(name='aPythonPack',
       version='0.1',
       # description='The funniest joke in the world',
       # url='http://github.com/storborg/funniest',
       # author='Flying Circus',
       # author_email='flyingcircus@example.com',
       # license='MIT',
-      packages=['matplotlib','sympy','numpy'],
+      packages=['matplotlib','sympy','numpy','aPythonPack'],
       # zip_safe=False
 )
