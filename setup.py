@@ -7,6 +7,6 @@ setup(name='ThePack',
       # author='Flying Circus',
       # author_email='flyingcircus@example.com',
       # license='MIT',
-      packages=setup.find_packages()['ThePack'],
+      packages=['matplotlib','sympy','numpy'],
       # zip_safe=False
 )
