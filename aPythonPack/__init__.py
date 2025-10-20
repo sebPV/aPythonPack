@@ -16,6 +16,29 @@ def sympArr(arr):
         res.append(sp.sympify(n))
     return res
 
+
+def arrOp(func, values, args=[]):
+    argNames = func.__code__.co_varnames
+    res = []
+    for n in values:
+        parsel ={}       
+        if not isinstance(values[0], Iterable):
+            parsel[argNames[0]]=n
+            for m in range(len(args)):
+                parsel[argNames[m+1]] = args[m]
+        else:
+            for m in range(len(values)):
+                parsel[argNames[m]] = n[m]
+            for m in range(len(args)):
+                parsel[argNames[m+len(n)]]=args[m]
+        print(parsel)
+        
+        res.append(func(**parsel))
+    return res
+
+
+
+
 def forceRekt(arr):
     if isinstance(arr, Iterable):
         res = []
@@ -33,6 +56,12 @@ def forcePol(arr):
     else:
         return sp.Abs(arr)*sp.exp(I*sp.arg(arr))
 
+def divArr(arr):
+    res =[]
+    for n in arr:
+        res.append(sp.div(n[0],n[1]))
+    return res
+
 def plotComplex(arr):
     plt.axvline(0, color="gray")  # akser
     plt.axhline(0, color="gray")  # akser
@@ -48,4 +77,3 @@ def plotComplex(arr):
     plt.ylabel(r"$Im(z)$")  # akse-etiketter
     plt.grid(True)  # gitter
 
-print(forcePol(2+3*I))
