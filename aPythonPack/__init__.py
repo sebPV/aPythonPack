@@ -14,9 +14,9 @@ def sympArr(arr):
     return arr
 def forceRekt(arr):
     for n in range(len(arr)):
-        arr[n] = sp.re(arr[n])+i*sp.im(arr[n])
+        arr[n] = sp.re(arr[n])+I*sp.im(arr[n])
     return arr
 def forcePol(arr):
     for n in range(len(arr)):
-        arr[n] = sp.Abs(arr[n])*sp.exp(i*sp.arg(arr[n]))
+        arr[n] = sp.Abs(arr[n])*sp.exp(I*sp.arg(arr[n]))
     return arr
