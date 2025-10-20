@@ -7,6 +7,6 @@ setup(name='aPythonPack',
       # author='Flying Circus',
       # author_email='flyingcircus@example.com',
       # license='MIT',
-      packages=['matplotlib','sympy','numpy','aPythonPack'],
+      packages=['aPythonPack'],
       # zip_safe=False
 )
