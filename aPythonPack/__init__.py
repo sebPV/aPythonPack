@@ -112,5 +112,5 @@ def arrTabular(*Data,hline=False):
         res = res + line
     return res
 
-print(arrTabular([3,4,5,6],sp.Matrix([[1,2],[3,4]]),hline = True))
-print(sp.Matrix([[1,2],[3,4]]))
+# print(arrTabular([3,4,5,6],sp.Matrix([[1,2],[3,4]]),hline = True))
+# print(sp.Matrix([[1,2],[3,4]]))
