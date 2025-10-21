@@ -37,20 +37,10 @@ def arrOp(func, values, *args):
                     parsel.update(args[m])
                 else:
                     parsel[argNames[m+len(n)]]=args[m]
-        print('parsel=' + str(parsel))
         
         res.append(func(**parsel))
     return res
 
-from sympy.abc import x
-print(arrOp(sp.solveset,[(x-1)*(x-2)*(x-3)**5],{'symbol': x}))
-# def test(a,b,*arg):
-#     return a,b,*arg
-# print(test(1,2))
-# print(test(1,3))
-# print(test(1,3,5,5,{'3':9},7))
-
-print(type({'1':2}))
 
 def forceRekt(arr):
     if isinstance(arr, Iterable):

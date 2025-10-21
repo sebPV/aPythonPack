@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='aPythonPack',
-      version='0.2.2',
+      version='0.2.3',
       # description='The funniest joke in the world',
       # url='http://github.com/storborg/funniest',
       # author='Flying Circus',
