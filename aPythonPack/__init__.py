@@ -1,10 +1,10 @@
 import matplotlib.pyplot as plt  # importerer matplotlib
 import sympy as sp# importerer sympy
-from sympy import exp, I , pi, sqrt
+from sympy import exp, I , pi, sqrt, e, log, ln
 import numpy as np
 from collections.abc import Iterable
 sp.init_printing()  # gør at matematiske udtryk skrives pænt
-
+import LatexConversions
 def simpArr(arr):
     res = []
     for n in arr:
