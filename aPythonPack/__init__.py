@@ -1,8 +1,15 @@
 import matplotlib.pyplot as plt  # importerer matplotlib
 import sympy as sp# importerer sympy
-from sympy import exp, I , pi, sqrt, E, log, ln
-from sympy import E as e
 import numpy as np
+import pandas as pd
+import pint_pandas
+
+
+from pint import UnitRegistry
+ureg = UnitRegistry()
+Q_ = ureg.Quantity
+
+
 from collections.abc import Iterable
 sp.init_printing()  # gør at matematiske udtryk skrives pænt
 # import LatexConversions
