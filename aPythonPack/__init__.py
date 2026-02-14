@@ -5,10 +5,12 @@ import pandas as pd
 import pint_pandas
 
 
-from pint import UnitRegistry
+from pint import UnitRegistry, set_application_registry
 ureg = UnitRegistry()
+ureg.formatter.default_format = "P"
 Q_ = ureg.Quantity
 
+set_application_registry(ureg)
 
 from collections.abc import Iterable
 sp.init_printing()  # gør at matematiske udtryk skrives pænt
