@@ -32,7 +32,7 @@ tt=np.linspace(0,4,10)
 
 plot = tikzPlot()
 plot.addPlot([1,2,3,4],[5,6,7,8],legend='pis')
-plot.addPlot(tt,tt**2,legend='lort',opt='line',line='--o')
+plot.addPlot(tt,tt**2,legend='lort',line='--o')
 plot.printPlot()
 plot.writePLot()
 

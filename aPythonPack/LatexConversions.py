@@ -114,16 +114,4 @@ class tikzPlot:
 
 
 
-# def dfToTab(Data=pd.DataFrame):
-#     tabular = ''
-#     header = ''
-#     for i in Data:
-#         header += str(i[0])
-
-
-#     return tabular
-
-
-
-
 
