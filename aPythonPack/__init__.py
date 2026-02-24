@@ -3,7 +3,8 @@ import sympy as sp# importerer sympy
 import numpy as np
 import pandas as pd
 import pint_pandas
-
+import scipy
+from uncertainties import *
 
 from pint import UnitRegistry, set_application_registry
 ureg = UnitRegistry()
