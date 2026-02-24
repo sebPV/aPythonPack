@@ -105,7 +105,7 @@ class tikzPlot:
         print(self.createString())
 
 
-    def writePLot(self,filename ='plot'):
+    def writePlot(self,filename ='plot'):
         with open(filename+'.tex', 'w') as f:
             f.write(self.createString())
 
